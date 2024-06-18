@@ -1,7 +1,9 @@
 {
-  "bioconductor.version": null,
+  "bioconductor.version": "3.18",
   "external.libraries": [],
-  "ignored.packages": ["oricvis"],
+  "ignored.packages": [
+    "oricvis"
+  ],
   "package.dependency.fields": [
     "Imports",
     "Depends",
