@@ -5,7 +5,6 @@ library(shinyjs)
 add_data_module_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    useShinyjs(),
     textInput(ns("name"), "Name:"),
     textInput(ns("surname"), "Surname:"),
     selectizeInput(ns("cars"),
@@ -27,12 +26,14 @@ add_data_module <- function(input, output, session) {
     if (is.null(input$name) || input$name == "" ||
         is.null(input$surname) || input$surname == "" ||
         is.null(input$cars) || length(input$cars) == 0) {
+
       showModal(modalDialog(
         title = "Error",
         "Please fill in all fields.",
         easyClose = TRUE,
         footer = NULL
       ))
+
     } else {
       data <- list(
         name = input$name,

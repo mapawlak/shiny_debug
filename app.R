@@ -11,7 +11,6 @@ source("modules/add_data_module.R")
 # UI
 ui <- fluidPage(
   useShinyjs(), # Initialize shinyjs
-  tags$head(tags$script(HTML(js))), # Include JavaScript in the UI
   titlePanel("Demo Shiny app with a form"),
   sidebarLayout(
     sidebarPanel(
